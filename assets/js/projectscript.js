@@ -23,13 +23,11 @@ const introOptionsAnswers = {
 };
 
 const section2 = document.getElementById("card2");
-console.log(section2);
 const introResultText = document.getElementById("intro-answer-result");
 console.log(introResultText);
 const defaultResultText = introResultText.innerHTML;
 
 function introBtnClick() {
-    console.log("function runs");
   // For each button, add a click listener.
   introOptions.forEach((option) => {
     option.addEventListener("click", () => {
@@ -66,21 +64,4 @@ function introBtnClick() {
   // When any option is clicked, change chosen-option span to option id and get the value of that id of allocation from a pre-made list
 }
 
-const betskip = document.getElementById("betskip");
-const betsbt = document.getElementById("betsbt");
-const section3 = document.getElementById("card3");
-
-
-function betHandling (){
-    betskip.addEventListener("click", () => {
-        section3.style.maxHeight = section3.scrollHeight + "px";
-    });
-};
- 
-
-function initializing(){
-    introBtnClick();   
-};
-
 document.addEventListener("DOMContentLoaded", introBtnClick());
-// document.addEventListener("DOMContentLoaded", betHandling());
