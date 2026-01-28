@@ -62,6 +62,24 @@ function introBtnClick() {
   // When any option is clicked, reveal the next section
   // When any option is clicked, change result-text to a or b
   // When any option is clicked, change chosen-option span to option id and get the value of that id of allocation from a pre-made list
-}
+}''
+
+const section3 = document.getElementById("card3");
+const betskip = document.getElementById("betskip");
+const betsbt = document.getElementById("betsbt");
+
+function betHandling(){
+  betskip.addEventListener("click", () => {
+    section3.style.maxHeight = section3.scrollHeight + "px";
+    console.log(betskip);
+    console.log(betsbt);
+    betskip.style.pointerEvents="none";
+    betsbt.style.pointerEvents="none";
+    betskip.style.backgroundColor="darkgrey";
+    betskip.style.color="white";
+    betsbt.style.backgroundColor="grey";
+  });
+};
 
 document.addEventListener("DOMContentLoaded", introBtnClick());
+document.addEventListener("DOMContentLoaded",betHandling());

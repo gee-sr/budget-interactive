@@ -306,6 +306,7 @@ body {
   background-color: #f8eab3;
   border-radius: 2px;
   padding: 2px 7px;
+  margin-top: 10px;
 }
 .thg-interactive .card .racing-chart-options-container .make-bet-btn.make-bet-sbt {
   background-color: #8e3801;
@@ -403,7 +404,7 @@ body {
     display: none;
   }
 }
-.thg-interactive .card #card2 {
+.thg-interactive .card #card2, .thg-interactive .card #card3, .thg-interactive .card #card4, .thg-interactive .card #card5 {
   transition: all 2.2s ease;
   overflow: hidden;
 }

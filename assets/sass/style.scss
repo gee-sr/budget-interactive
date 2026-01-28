@@ -350,6 +350,7 @@ body {
         background-color: #f8eab3;
         border-radius: 2px;
         padding: 2px 7px;
+        margin-top: 10px;
 
         &.make-bet-sbt {
           background-color: #8e3801;
@@ -442,7 +443,7 @@ body {
       }
     }
 
-    #card2{
+    #card2,#card3,#card4,#card5{
         transition: all 2.2s ease;
         overflow: hidden;
     }
