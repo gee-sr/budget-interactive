@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 * {
   margin: 0;
@@ -185,16 +186,16 @@ body {
   position: relative;
 }
 .thg-interactive .card .card-inner .lead-text-c .lead-text {
-  font-size: 14px;
+  font-size: 12px;
   font-style: italic;
-  margin-top: 21px;
+  margin: 2px;
 }
 .thg-interactive .card .card-inner .lead-text-c .lead-text-banner {
   font-size: 14px;
-  background-color: #8e3801;
-  color: white;
   padding: 1px 2px;
+  font-weight: bold;
   font-style: italic;
+  margin: 2px;
 }
 .thg-interactive .card .card-inner .sector-scroll-wrapper {
   overflow: hidden;
@@ -210,8 +211,15 @@ body {
 }
 .thg-interactive .card .card-inner .sector-scroll-wrapper .sector-scroll-container .sector-tags {
   white-space: nowrap;
-  background-color: #e9dca9;
   padding: 4px 8px;
+  position: relative;
+  color: #8e3801;
+  margin: 3px;
+}
+.thg-interactive .card .card-inner .sector-scroll-wrapper .sector-scroll-container .sector-tags::after {
+  content: "⬩";
+  position: absolute;
+  right: 100%;
 }
 .thg-interactive .card .card-inner .question-text {
   margin-top: 27px;
@@ -229,6 +237,19 @@ body {
   border-radius: 5px;
   padding: 5px 9px;
   background-color: #e9dca9;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.thg-interactive .card .card-inner .options-container .intro-options.selected {
+  border: 2px black solid;
+}
+.thg-interactive .card .card-inner .options-container .intro-options.correct {
+  background-color: green;
+  color: white;
+}
+.thg-interactive .card .card-inner .options-container .intro-options.incorrect {
+  background-color: #b00020;
+  color: white;
 }
 .thg-interactive .card .card-inner .intro-answer-container {
   margin-top: 30px;
@@ -259,10 +280,17 @@ body {
   margin: 0;
   font-style: italic;
 }
+.thg-interactive .card .card-inner .intro-answer-container .intro-dropdown-container .intro-dropdown .dropdown-arrow.rotate {
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
+}
 .thg-interactive .card .card-inner .intro-answer-container .intro-dropdown-container .intro-dropdown-text {
   border: 1px solid #8e3801;
   border-top: 0px;
-  padding: 10px;
+  padding: 0 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 .thg-interactive .card .card-inner .intro-answer-container .intro-dropdown-container .intro-dropdown-text p {
   color: white;

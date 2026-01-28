@@ -208,16 +208,16 @@ body {
       .lead-text-c {
         position: relative;
         .lead-text {
-          font-size: 14px;
+          font-size: 12px;
           font-style: italic;
-          margin-top: 21px;
+          margin: 2px;
         }
         .lead-text-banner {
           font-size: 14px;
-          background-color: #8e3801;
-          color: white;
           padding: 1px 2px;
+          font-weight: bold;
           font-style: italic;
+          margin: 2px;
         }
       }
 
@@ -233,8 +233,16 @@ body {
 
           .sector-tags {
             white-space: nowrap;
-            background-color: #e9dca9;
+            // background-color: #e9dca9;
             padding: 4px 8px;
+            position: relative;
+            color: #8e3801;
+            margin: 3px;
+            &::after {
+              content: "⬩";
+              position: absolute;
+              right: 100%;
+            }
           }
         }
       }
@@ -255,6 +263,22 @@ body {
           border-radius: 5px;
           padding: 5px 9px;
           background-color: #e9dca9;
+          pointer-events: auto;
+          cursor: pointer;
+
+          &.selected{
+            border: 2px black solid;
+          }
+
+          &.correct{
+            background-color: green;
+            color: white;
+          }
+
+          &.incorrect{
+            background-color: $red-color;
+            color:white;
+          }
         }
       }
 
@@ -285,12 +309,23 @@ body {
               margin: 0;
               font-style: italic;
             }
+
+            .dropdown-arrow{
+
+                &.rotate{
+                    transform: rotate(180deg);
+                    transition: all 0.3s ease;
+                }
+            }
           }
 
           .intro-dropdown-text {
             border: 1px solid #8e3801;
             border-top: 0px;
-            padding: 10px;
+            padding: 0 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
             p {
               color: white;
             }
@@ -372,7 +407,7 @@ body {
                   padding: 2px 4px;
                   text-align: center;
 
-                  @media (max-width:450px) {
+                  @media (max-width: 450px) {
                     content: "";
                     display: none;
                   }
