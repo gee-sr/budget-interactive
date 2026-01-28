@@ -170,7 +170,6 @@ body {
   border: 7px solid #e3ded3;
 }
 .thg-interactive .card .card-inner {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
@@ -403,6 +402,10 @@ body {
   .thg-interactive .card .card-inner-expanded .all-sectors .sector-cards-wrapper .sector-cards-right {
     display: none;
   }
+}
+.thg-interactive .card #card2 {
+  transition: all 2.2s ease;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 1650px) {

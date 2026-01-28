@@ -194,7 +194,7 @@ body {
     border: 7px solid #e3ded3;
     // background-color: #fffef5;
     .card-inner {
-      display: flex;
+    //   display: flex;
       flex-direction: column;
       justify-content: center;
       width: 100%;
@@ -440,6 +440,11 @@ body {
           }
         }
       }
+    }
+
+    #card2{
+        transition: all 2.2s ease;
+        overflow: hidden;
     }
   }
 }

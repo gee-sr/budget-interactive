@@ -249,33 +249,27 @@
             </p>
           </div>
           <hr />
-          <!-- <p class="lead-text">
-Ahead of the 2026-27 Union budget, here’s a look at how each ministry’s allocations have evolved through the years 
-          </p> -->
-
-          <!-- <p>We have 29 sectors in play. Each 'sector' is a group of related departments in the budgets between 2000-01 to <span class="default-year">2025-2026</span></p> -->
-          <!-- <p>Let's start with this question</p> -->
           <h2 class="question-text">
             Which sector got the highest allocation in the Union budget of
             <span class="default-year">2025-2026</span>?
           </h2>
           <div class="options-container">
             <button class="intro-options" id="Education">Education</button>
-            <button class="intro-options" id="Finance">Finance</button>
+            <button class="intro-options correct-option" id="Finance">
+              Finance
+            </button>
             <button class="intro-options" id="Defence">Defence</button>
             <button class="intro-options" id="Energy">Energy</button>
-            <button class="intro-options" id="Transport">
-              Transport
-            </button>
+            <button class="intro-options" id="Transport">Transport</button>
           </div>
         </div>
         <div class="card-inner" style="display: none"></div>
-        <section class="card-inner" style="display: none;">
+        <section class="card-inner" id="card2" style="max-height: 0">
           <div class="intro-answer-container">
-            <h2><span class="intro-answer-result">Close!</span></h2>
+            <h2 id="intro-answer-result">Close!</h2>
             <p class="intro-answer">
-              <span class="chosen-option">Education</span> got
-              <span class="chosen-option-allo">X</span>% of the budget.
+              <span id="chosen-option">Education</span> got
+              <span id="chosen-option-allo">X</span>% of the budget.
             </p>
             <p>The Finance sector received 36% of total budget allocations.</p>
             <p>
@@ -393,8 +387,6 @@ Ahead of the 2026-27 Union budget, here’s a look at how each ministry’s allo
               <p class="sector-tags">Chemicals and petrochemicals</p>
             </div>
           </div>
-        </section>
-        <section class="card-inner" style="display:none">
           <p>
             The Finance sector remained the number one sector in terms of
             allocation share since 2000-01. However, the other four have changed
@@ -437,42 +429,8 @@ Ahead of the 2026-27 Union budget, here’s a look at how each ministry’s allo
             <button class="make-bet-btn make-bet-skip">Skip betting</button>
           </div>
         </section>
-        <section class="card-inner" style="display: none;">
-          <div
-            class="flourish-embed flourish-bar-chart-race"
-            id="skip-bet-flourish"
-            data-src="visualisation/27397780"
-          >
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript
-              ><img
-                src="https://public.flourish.studio/visualisation/27397780/thumbnail"
-                width="100%"
-                alt="bar-chart-race visualization"
-            /></noscript>
-          </div>
-          <section class="make-bet">
-            <!-- Add in-flourish annotation indicating whether they won or not. Replace viz according to option chosen -->
-            <div
-              class="flourish-embed flourish-bar-chart-race"
-              data-src="visualisation/27397780"
-              id="make-bet-flourish"
-            >
-              <script src="https://public.flourish.studio/resources/embed.js"></script>
-              <noscript
-                ><img
-                  src="https://public.flourish.studio/visualisation/27397780/thumbnail"
-                  width="100%"
-                  alt="bar-chart-race visualization"
-              /></noscript>
-            </div>
-            <p>That was the top 5.</p>
-            <p>
-              <b>Here's how the other sectors have evolved over the years.</b>
-            </p>
-          </section>
-        </section>
-        <section class="card-inner-expanded" style="display: none;">
+        <section class="card-inner" style="display: none"></section>
+        <section class="card-inner-expanded" style="display: none">
           <section class="all-sectors">
             <div class="sector-cards-wrapper">
               <!-- <div class="sector-cards-container">
@@ -798,12 +756,6 @@ Ahead of the 2026-27 Union budget, here’s a look at how each ministry’s allo
           </section>
         </section>
       </section>
-      <!-- <section class="card card2"></section>
-      <section class="card3 card"></section>
-      <section class="card card4">
-
-
-      </section> -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
