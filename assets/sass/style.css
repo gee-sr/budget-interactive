@@ -403,7 +403,7 @@ body {
     display: none;
   }
 }
-.thg-interactive .card #card2 {
+.thg-interactive .card #card2, .thg-interactive .card #card3 {
   transition: all 2.2s ease;
   overflow: hidden;
 }

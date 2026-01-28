@@ -177,7 +177,7 @@
       </div>
     </header>
     <div class="thg-interactive">
-      <section class="card card1">
+      <section class="card">
         <div class="card-inner card1">
           <div class="lead-text-c">
             <p class="lead-text-banner">Budget interactive</p>
@@ -263,13 +263,12 @@
             <button class="intro-options" id="Transport">Transport</button>
           </div>
         </div>
-        <div class="card-inner" style="display: none"></div>
         <section class="card-inner" id="card2" style="max-height: 0">
           <div class="intro-answer-container">
-            <h2 id="intro-answer-result">Close!</h2>
+            <h2><span class="intro-answer-result">Close!</span></h2>
             <p class="intro-answer">
-              <span id="chosen-option">Education</span> got
-              <span id="chosen-option-allo">X</span>% of the budget.
+              <span class="chosen-option">Education</span> got
+              <span class="chosen-option-allo">X</span>% of the budget.
             </p>
             <p>The Finance sector received 36% of total budget allocations.</p>
             <p>
@@ -429,317 +428,24 @@
             <button class="make-bet-btn make-bet-skip">Skip betting</button>
           </div>
         </section>
-        <section class="card-inner" style="display: none"></section>
+        <section class="card-inner skip-bet" id="card3" style="max-height: 0;">
+          <div
+            class="flourish-embed flourish-bar-chart-race"
+            id="skip-bet-flourish"
+            data-src="visualisation/27397780"
+          >
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+            <noscript
+              ><img
+                src="https://public.flourish.studio/visualisation/27397780/thumbnail"
+                width="100%"
+                alt="bar-chart-race visualization"
+            /></noscript>
+          </div>  
+        </section>
         <section class="card-inner-expanded" style="display: none">
           <section class="all-sectors">
             <div class="sector-cards-wrapper">
-              <!-- <div class="sector-cards-container">
-                <!-- <div class="sector-card">
-                <div class="sector-title"><p>Agriculture and allied</p></div>
-                <div
-                  class="flourish-embed flourish-chart"
-                  data-src="visualisation/27404035"
-                >
-                  <script src="https://public.flourish.studio/resources/embed.js"></script>
-                  <noscript
-                    ><img
-                      src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                      width="100%"
-                      alt="chart visualization"
-                  /></noscript>
-                </div>
-              </div> -->
-              <!-- <div class="sector-card">
-                  <div class="sector-title"><p>Agriculture and allied</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>AYUSH</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>Business and Industry</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                  <div class="sector-card-detail" style="display: none">
-                    <p>Here's a brief sector card detail.</p>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>Chemicals and petrochemicals</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>Civil aviation</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title">
-                    <p>Communications</p>
-                  </div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>Companies</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>Consumer Affairs</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card sector-card-detail">
-                  <div class="sector-title"><p>Defence</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>Education</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card sector-card-detail">
-                  <div class="sector-title"><p>Energy</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card sector-card-detail">
-                  <div class="sector-title"><p>Environment</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>Agriculture and allied</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>Agriculture and allied</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>Agriculture and allied</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>Agriculture and allied</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>Agriculture and allied</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>Agriculture and allied</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-                <div class="sector-card">
-                  <div class="sector-title"><p>Agriculture and allied</p></div>
-                  <div
-                    class="flourish-embed flourish-chart"
-                    data-src="visualisation/27404035"
-                  >
-                    <script src="https://public.flourish.studio/resources/embed.js"></script>
-                    <noscript
-                      ><img
-                        src="https://public.flourish.studio/visualisation/27404035/thumbnail"
-                        width="100%"
-                        alt="chart visualization"
-                    /></noscript>
-                  </div>
-                </div>
-              </div> -->
               <div
                 class="flourish-embed flourish-cards"
                 data-src="visualisation/27406751"
@@ -756,6 +462,7 @@
           </section>
         </section>
       </section>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
