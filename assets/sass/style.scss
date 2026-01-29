@@ -194,7 +194,7 @@ body {
     border: 7px solid #e3ded3;
     // background-color: #fffef5;
     .card-inner {
-    //   display: flex;
+      //   display: flex;
       flex-direction: column;
       justify-content: center;
       width: 100%;
@@ -266,18 +266,18 @@ body {
           pointer-events: auto;
           cursor: pointer;
 
-          &.selected{
+          &.selected {
             border: 2px black solid;
           }
 
-          &.correct{
+          &.correct {
             background-color: green;
             color: white;
           }
 
-          &.incorrect{
+          &.incorrect {
             background-color: $red-color;
-            color:white;
+            color: white;
           }
         }
       }
@@ -310,12 +310,11 @@ body {
               font-style: italic;
             }
 
-            .dropdown-arrow{
-
-                &.rotate{
-                    transform: rotate(180deg);
-                    transition: all 0.3s ease;
-                }
+            .dropdown-arrow {
+              &.rotate {
+                transform: rotate(180deg);
+                transition: all 0.3s ease;
+              }
             }
           }
 
@@ -443,10 +442,57 @@ body {
       }
     }
 
-    #card2,#card3,#card4,#card5{
-        transition: all 2.2s ease;
-        overflow: hidden;
+    #card2,
+    #card3,
+    #card4,
+    #card5 {
+      transition: all 2.2s ease;
+      overflow: hidden;
     }
+
+    #card2 {
+      .bet-wrapper {
+        .bet-q {
+          border: 2px solid rgb(209, 209, 182);
+          border-radius: 5px 5px 0 0;
+          padding: 5px;
+          position: relative;
+          margin-top: 51px;
+          p {
+            margin: 0;
+          }
+
+          &::before {
+            content: "";
+            height: 39px;
+            width: 3px;
+            background-color: rgb(209, 209, 182);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+          }
+
+          &::after{
+            content: "";
+            height:13px;
+            width:3px;
+            background-color: rgb(209, 209, 182);
+            position: absolute;
+            top:100%;
+            left:50%;
+
+          }
+        }
+
+        .racing-chart-options-container{
+          border: 2px solid rgb(209, 209, 182);
+          border-radius: 0 0 5px 5px;
+          padding: 10px;
+          margin-top: 9px;
+        }
+      }
+    }
+
   }
 }
 @media screen and (min-width: 1650px) {
