@@ -332,6 +332,13 @@ body {
         }
       }
 
+      .option-detail-container {
+        .chosen-option {
+          background-color: #5e4d0b;
+          color: white;
+        }
+      }
+
       .all-sectors {
         .sector-cards-container {
           display: flex;
@@ -472,19 +479,18 @@ body {
             left: 50%;
           }
 
-          &::after{
+          &::after {
             content: "";
-            height:13px;
-            width:3px;
+            height: 13px;
+            width: 3px;
             background-color: rgb(209, 209, 182);
             position: absolute;
-            top:100%;
-            left:50%;
-
+            top: 100%;
+            left: 50%;
           }
         }
 
-        .racing-chart-options-container{
+        .racing-chart-options-container {
           border: 2px solid rgb(209, 209, 182);
           border-radius: 0 0 5px 5px;
           padding: 10px;
@@ -492,7 +498,6 @@ body {
         }
       }
     }
-
   }
 }
 @media screen and (min-width: 1650px) {

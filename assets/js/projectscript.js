@@ -1,3 +1,45 @@
+const config = {
+  defaultYear: "2026-2027",
+  sectors: {
+    education: {
+      percent: "19%",
+      amt: "2000 crores",
+      isHighest: false
+    },
+    defence: {
+      percent: "10%",
+      amt: "3000 crores",
+      isHighest: false
+    },
+    energy: {
+      percent: "6%",
+      amt: "4000 crores",
+      isHighest: false
+    },
+    transport: {
+      percent: "19%",
+      amt: "2000 crores",
+      isHighest: false
+    },
+    finance: {
+      percent: "36%",
+      amt: "8000 crores",
+      isHighest: true
+    }
+  }
+};
+
+const sectorPerc = document.getElementById("chosen-option-allo-perc");
+const sectorAmt = document.getElementById("chosen-option-allo-amt");
+const chosenOption = document.querySelectorAll(".chosen-option");
+const highestSec = document.getElementById("highest-sec");
+const highestSecPerc = document.getElementById("highest-allo-perc");
+
+const defaultYears = document.querySelectorAll(".default-year");
+defaultYears.forEach((year) => {
+  year.textContent = config.defaultYear;
+});
+
 const dropdown = document.querySelector(".intro-dropdown");
 const dropdownText = document.querySelector(".intro-dropdown-text");
 const arrow = document.querySelector(".dropdown-arrow");
@@ -32,6 +74,18 @@ function introBtnClick() {
     option.addEventListener("click", () => {
       //Add selected class to clicked button
       option.classList.add("selected");
+      const selectedValue = option.innerHTML;
+      console.log(chosenOption);
+
+      chosenOption.forEach((chosen) => {
+        chosen.textContent = selectedValue;
+      })
+
+
+      sectorPerc.textContent = config.sectors[selectedValue.toLowerCase()].percent;
+      sectorAmt.textContent = config.sectors[selectedValue.toLowerCase()].amt;
+
+
       introOptions.forEach((option) => {
         //Remove pointer events for all buttons
         option.style.pointerEvents = "none";

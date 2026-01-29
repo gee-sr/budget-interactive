@@ -127,7 +127,6 @@
           </div>
           <div class="share">
             <button class="share-btn">Share</button>
-
             <ul class="share-list">
               <li class="copy-link" onclick="copyToClipboard()">Copy link</li>
               <li class="email" onclick="sendEmail()">Email</li>
@@ -268,10 +267,10 @@
           <div class="intro-answer-container">
             <h2 id="intro-answer-result">Close!</h2>
             <p class="intro-answer">
-              <span id="chosen-option">Education</span> got
-              <span id="chosen-option-allo">X</span>% of the budget.
+              <span class="chosen-option">Education</span> got
+              <span id="chosen-option-allo-perc">X</span> of the budget, or <span id="chosen-option-allo-amt">1,000 crores</span>.
             </p>
-            <p>The Finance sector received 36% of total budget allocations.</p>
+            <p>The <span id="highest-sec">Finance</span> sector received <span id="highest-allo-perc">36%</span> of total budget allocations.</p>
             <p>
               In fact, it was the sector that received the most allocations
               consistently, since the 2000-01 Union budget.

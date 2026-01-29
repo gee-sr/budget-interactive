@@ -294,6 +294,10 @@ body {
 .thg-interactive .card .card-inner .intro-answer-container .intro-dropdown-container .intro-dropdown-text p {
   color: white;
 }
+.thg-interactive .card .card-inner .option-detail-container .chosen-option {
+  background-color: #5e4d0b;
+  color: white;
+}
 .thg-interactive .card .card-inner .all-sectors .sector-cards-container {
   display: flex;
   flex-wrap: wrap;
