@@ -137,15 +137,16 @@ const section5 = document.getElementById("card5");
 const betSelector = document.getElementById("betselector");
 const betGraphics = [...document.querySelectorAll(".bet-bar-race")];
 const section4 = document.getElementById("card4");
+const section6 = document.getElementById("end-credits");
 
 function betHandling() {
   betSkip.addEventListener("click", () => {
     betSkip.style.display = "none";
-    betSbt.style.color="black";
+    betSbt.style.color = "black";
     betSbt.style.fontWeight = "bold";
     betSbt.textContent =
       "Bet skipped. Here's how sector allocations have changed for the top 10 after 2014";
-    betSbt.style.backgroundColor="transparent";
+    betSbt.style.backgroundColor = "transparent";
     setTimeout(() => {
       section3.style.maxHeight = section3.scrollHeight + "px";
     }, 1000);
@@ -153,6 +154,9 @@ function betHandling() {
     setTimeout(() => {
       section5.style.maxHeight = section5.scrollHeight + "px";
     }, 10000);
+    setTimeout(() => {
+      section6.style.maxHeight = section6.scrollHeight + "px";
+    }, 11000);
   });
 
   betSbt.addEventListener("click", () => {
@@ -165,10 +169,10 @@ function betHandling() {
       betSbt.textContent = "Good luck!";
       betSkip.style.pointerEvents = "none";
       betSbt.style.pointerEvents = "none";
-      betSkip.style.display="none";
+      betSkip.style.display = "none";
       betSbt.style.backgroundColor = "transparent";
-      betSbt.style.color="black";
-      betSbt.style.fontWeight="bold";
+      betSbt.style.color = "black";
+      betSbt.style.fontWeight = "bold";
       setTimeout(() => {
         section5.style.maxHeight = section5.scrollHeight + "px";
       }, 10000);
@@ -183,6 +187,9 @@ function betHandling() {
     setTimeout(() => {
       section5.style.maxHeight = section5.scrollHeight + "px";
     }, 10000);
+    setTimeout(() => {
+      section6.style.maxHeight = section6.scrollHeight + "px";
+    }, 11000);
   });
 }
 

@@ -445,6 +445,14 @@ body {
   padding: 10px;
   margin-top: 9px;
 }
+.thg-interactive #end-credits {
+  width: 100%;
+  max-width: 800px;
+  margin: 18px auto;
+}
+.thg-interactive #end-credits p {
+  margin: 0;
+}
 
 @media screen and (min-width: 1650px) {
   .header .nav-bar {
