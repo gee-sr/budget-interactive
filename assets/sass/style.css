@@ -256,7 +256,7 @@ body {
   text-align: center;
   color: #5e4d0b;
 }
-.thg-interactive .card .card-inner .intro-answer-container .intro-answer {
+.thg-interactive .card .card-inner .intro-answer-container #correct-option-detail {
   background-color: #5e4d0b;
   color: white;
 }
@@ -273,6 +273,7 @@ body {
   border-right: 1px solid #8e3801;
   border-bottom: 1px solid #8e3801;
   border-left: 1px solid #8e3801;
+  cursor: pointer;
 }
 .thg-interactive .card .card-inner .intro-answer-container .intro-dropdown-container .intro-dropdown p {
   margin: 0;
