@@ -271,12 +271,11 @@ body {
           }
 
           &.correct {
-            background-color: green;
-            color: white;
+            background-color: rgb(173, 233, 173);
           }
 
           &.incorrect {
-            background-color: $red-color;
+            background-color: rgb(219, 150, 150);
             color: white;
           }
         }
@@ -332,7 +331,7 @@ body {
         }
       }
 
-      .option-detail-container {
+      #option-detail-container {
         .chosen-option {
           background-color: #5e4d0b;
           color: white;
@@ -372,7 +371,6 @@ body {
       .all-sectors {
         position: relative;
         .sector-cards-wrapper {
-          display: flex;
           .sector-cards-container {
             width: 100%;
             @media (min-width: 760px) {

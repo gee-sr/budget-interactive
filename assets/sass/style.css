@@ -243,11 +243,10 @@ body {
   border: 2px black solid;
 }
 .thg-interactive .card .card-inner .options-container .intro-options.correct {
-  background-color: green;
-  color: white;
+  background-color: rgb(173, 233, 173);
 }
 .thg-interactive .card .card-inner .options-container .intro-options.incorrect {
-  background-color: #b00020;
+  background-color: rgb(219, 150, 150);
   color: white;
 }
 .thg-interactive .card .card-inner .intro-answer-container {
@@ -294,7 +293,7 @@ body {
 .thg-interactive .card .card-inner .intro-answer-container .intro-dropdown-container .intro-dropdown-text p {
   color: white;
 }
-.thg-interactive .card .card-inner .option-detail-container .chosen-option {
+.thg-interactive .card .card-inner #option-detail-container .chosen-option {
   background-color: #5e4d0b;
   color: white;
 }
@@ -321,9 +320,6 @@ body {
 }
 .thg-interactive .card .card-inner-expanded .all-sectors {
   position: relative;
-}
-.thg-interactive .card .card-inner-expanded .all-sectors .sector-cards-wrapper {
-  display: flex;
 }
 .thg-interactive .card .card-inner-expanded .all-sectors .sector-cards-wrapper .sector-cards-container {
   width: 100%;

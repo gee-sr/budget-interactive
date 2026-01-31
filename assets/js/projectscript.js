@@ -4,29 +4,29 @@ const config = {
     education: {
       percent: "19%",
       amt: "2000 crores",
-      isHighest: false
+      isHighest: false,
     },
     defence: {
       percent: "10%",
       amt: "3000 crores",
-      isHighest: false
+      isHighest: false,
     },
     energy: {
       percent: "6%",
       amt: "4000 crores",
-      isHighest: false
+      isHighest: false,
     },
     transport: {
       percent: "19%",
       amt: "2000 crores",
-      isHighest: false
+      isHighest: false,
     },
     finance: {
       percent: "36%",
       amt: "8000 crores",
-      isHighest: true
-    }
-  }
+      isHighest: true,
+    },
+  },
 };
 
 const sectorPerc = document.getElementById("chosen-option-allo-perc");
@@ -67,6 +67,7 @@ const introOptionsAnswers = {
 const section2 = document.getElementById("card2");
 const introResultText = document.getElementById("intro-answer-result");
 const defaultResultText = introResultText.innerHTML;
+const introLineCharts = [...document.getElementsByClassName("intro-line")];
 
 function introBtnClick() {
   // For each button, add a click listener.
@@ -75,16 +76,16 @@ function introBtnClick() {
       //Add selected class to clicked button
       option.classList.add("selected");
       const selectedValue = option.innerHTML;
-      console.log(chosenOption);
 
       chosenOption.forEach((chosen) => {
         chosen.textContent = selectedValue;
-      })
+      });
 
-
-      sectorPerc.textContent = config.sectors[selectedValue.toLowerCase()].percent;
+      console.log(config);
+      console.log(selectedValue.toLowerCase());
+      sectorPerc.textContent =
+        config.sectors[selectedValue.toLowerCase()].percent;
       sectorAmt.textContent = config.sectors[selectedValue.toLowerCase()].amt;
-
 
       introOptions.forEach((option) => {
         //Remove pointer events for all buttons
@@ -100,15 +101,26 @@ function introBtnClick() {
           : option.classList.add("incorrect");
       });
 
-      section2.style.maxHeight = section2.scrollHeight + "px";
-
-      //   const chosenOptionText = document.getElementById("chosen-option");
-      //   const chosenOptionAllo = document.getElementById("chosen-option-allo");
+      const idForChart = selectedValue.toLowerCase();
+      console.log(idForChart);
+      introLineCharts.forEach((chart) => {
+        if (chart.id === `${idForChart}-intro`) {
+          chart.style.maxHeight = chart.scrollHeight + "px";
+          return;
+        }
+      });
 
       const optionCorrect = option.classList.contains("correct");
       optionCorrect
         ? (introResultText.innerHTML = "<h2>That's right</h2>")
         : defaultResultText;
+
+      optionCorrect
+        ? (document.getElementById("option-detail-container").style.display =
+            "none")
+        : "";
+
+      section2.style.maxHeight = section2.scrollHeight + "px";
     });
   });
 
@@ -117,7 +129,6 @@ function introBtnClick() {
   // When any option is clicked, change result-text to a or b
   // When any option is clicked, change chosen-option span to option id and get the value of that id of allocation from a pre-made list
 }
-("");
 
 const section3 = document.getElementById("card3");
 const betSkip = document.getElementById("betskip");
@@ -126,16 +137,19 @@ const section5 = document.getElementById("card5");
 const betSelector = document.getElementById("betselector");
 const betGraphics = [...document.querySelectorAll(".bet-bar-race")];
 const section4 = document.getElementById("card4");
-const correctSectors = ["Defence", "Agri", "Transport", "UT"];
 
 function betHandling() {
   betSkip.addEventListener("click", () => {
-    section3.style.maxHeight = section3.scrollHeight + "px";
-    betSkip.style.pointerEvents = "none";
-    betSbt.style.pointerEvents = "none";
-    betSkip.style.backgroundColor = "darkgrey";
-    betSkip.style.color = "white";
-    betSbt.style.backgroundColor = "grey";
+    betSkip.style.display = "none";
+    betSbt.style.color="black";
+    betSbt.style.fontWeight = "bold";
+    betSbt.textContent =
+      "Bet skipped. Here's how sector allocations have changed for the top 10 after 2014";
+    betSbt.style.backgroundColor="transparent";
+    setTimeout(() => {
+      section3.style.maxHeight = section3.scrollHeight + "px";
+    }, 1000);
+
     setTimeout(() => {
       section5.style.maxHeight = section5.scrollHeight + "px";
     }, 10000);
@@ -151,9 +165,10 @@ function betHandling() {
       betSbt.textContent = "Good luck!";
       betSkip.style.pointerEvents = "none";
       betSbt.style.pointerEvents = "none";
-      betSkip.style.backgroundColor = "darkgrey";
-      betSkip.style.color = "white";
-      betSbt.style.backgroundColor = "grey";
+      betSkip.style.display="none";
+      betSbt.style.backgroundColor = "transparent";
+      betSbt.style.color="black";
+      betSbt.style.fontWeight="bold";
       setTimeout(() => {
         section5.style.maxHeight = section5.scrollHeight + "px";
       }, 10000);
