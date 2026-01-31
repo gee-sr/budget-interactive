@@ -126,6 +126,13 @@ function introBtnClick() {
         : "";
 
       section2.style.maxHeight = section2.scrollHeight + "px";
+      section2.addEventListener(
+        "transitionend",
+        () => {
+          section2.style.maxHeight = "none";
+        },
+        { once: true },
+      );
     });
   });
 
@@ -143,7 +150,9 @@ const betSelector = document.getElementById("betselector");
 const betGraphics = [...document.querySelectorAll(".bet-bar-race")];
 const section4 = document.getElementById("card4");
 const section6 = document.getElementById("end-credits");
-const racingOptionsContainer = document.getElementById("racing-chart-options-container");
+const racingOptionsContainer = document.getElementById(
+  "racing-chart-options-container",
+);
 
 function betHandling() {
   betSkip.addEventListener("click", () => {
@@ -152,7 +161,7 @@ function betHandling() {
     betSbt.style.fontWeight = "bold";
     betSbt.textContent =
       "Bet skipped. Here's how sector allocations changed for the top 10 after 2014";
-    betSbt.style.textAlign="left";
+    betSbt.style.textAlign = "left";
     betSbt.style.backgroundColor = "transparent";
 
     setTimeout(() => {
