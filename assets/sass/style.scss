@@ -192,6 +192,9 @@ body {
     min-height: 85dvh;
     border-radius: 10px;
     border: 7px solid #e3ded3;
+    @media (max-width: 450px){
+      width:100%;
+    }
     // background-color: #fffef5;
     .card-inner {
       //   display: flex;

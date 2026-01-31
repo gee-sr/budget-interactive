@@ -154,6 +154,16 @@ const racingOptionsContainer = document.getElementById(
   "racing-chart-options-container",
 );
 
+// function betResbt(betSbtClicks) {
+//   const betSector=betSelector.value;
+//   if (betSector) {
+//     if (betSbtClicks > 0) {
+//       betSbt.textContent = "Submit";
+//     }
+//   }
+// };
+
+
 function betHandling() {
   betSkip.addEventListener("click", () => {
     betSkip.style.display = "none";
@@ -180,8 +190,7 @@ function betHandling() {
     const betSector = betSelector.value;
     if (!betSector) {
       betSbt.textContent = "Please choose sector first!";
-      // return needed to exit the whole function so betSector can get a new value on the next click
-      return;
+      return
     } else {
       betSbt.textContent = "Good luck!";
       betSkip.style.pointerEvents = "none";
@@ -208,6 +217,11 @@ function betHandling() {
       section6.style.maxHeight = section6.scrollHeight + "px";
     }, 11000);
   });
+  betSelector.addEventListener("change", () => {
+  if (betSelector.value) {
+    betSbt.textContent = "Submit";
+  }
+});
 }
 
 document.addEventListener("DOMContentLoaded", introBtnClick());

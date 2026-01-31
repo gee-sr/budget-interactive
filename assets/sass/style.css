@@ -169,6 +169,11 @@ body {
   border-radius: 10px;
   border: 7px solid #e3ded3;
 }
+@media (max-width: 450px) {
+  .thg-interactive .card {
+    width: 100%;
+  }
+}
 .thg-interactive .card .card-inner {
   flex-direction: column;
   justify-content: center;
