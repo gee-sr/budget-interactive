@@ -349,7 +349,7 @@ body {
       }
     }
 
-    .racing-chart-options-container {
+    #racing-chart-options-container {
       .make-bet-btn {
         border: none;
         background-color: #f8eab3;
@@ -428,21 +428,6 @@ body {
               }
             }
           }
-          .sector-cards-right {
-            border: 2px solid black;
-            width: 100%;
-            padding-left: 16px;
-            height: 80dvh;
-            position: sticky;
-            top: 100px;
-            max-width: 27px;
-            @media (min-width: 760px) {
-              display: none;
-            }
-            @media (min-width: 530px) and (max-width: 759px) {
-              display: none;
-            }
-          }
         }
       }
     }
@@ -488,7 +473,7 @@ body {
           }
         }
 
-        .racing-chart-options-container {
+        #racing-chart-options-container {
           border: 2px solid rgb(209, 209, 182);
           border-radius: 0 0 5px 5px;
           padding: 10px;
@@ -496,15 +481,40 @@ body {
         }
       }
     }
-  }
-  #end-credits{
-    width: 100%;
-    max-width: 800px;
-    margin:18px auto;
-    p{
-      margin:0;
+
+    #card4{
+      .bet-bar-race{
+        max-height: 0;
+        overflow: hidden;
+      }
     }
 
+    .skip-bet {
+      .skip-bet-container {
+        border: 2px solid rgb(209, 209, 182);
+        margin: 30px auto;
+        border-radius: 0 0 5px 5px;
+        position: relative;
+
+        &::before {
+          content: "";
+          height: 32px;
+          width: 3px;
+          background-color: rgb(209, 209, 182);
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+        }
+      }
+    }
+  }
+  #end-credits {
+    width: 100%;
+    max-width: 800px;
+    margin: 18px auto;
+    p {
+      margin: 0;
+    }
   }
 }
 @media screen and (min-width: 1650px) {

@@ -269,7 +269,7 @@
               <span id="chosen-option-allo-perc">X</span> of the budget, or
               <span id="chosen-option-allo-amt">1,000 crores</span>.
             </p>
-            <p>
+            <p id="correct-option-detail">
               The <span id="highest-sec">Finance</span> sector received
               <span id="highest-allo-perc">36%</span> of total budget
               allocations.
@@ -463,7 +463,7 @@
                 >
               </p>
             </div>
-            <div class="racing-chart-options-container">
+            <div id="racing-chart-options-container">
               <div>
                 I bet that &nbsp;
                 <select id="betselector">
@@ -477,8 +477,8 @@
                   <option value="UT">Union Territory Transfers</option>
                   <option value="Rural">Rural</option>
                 </select>
-                &nbsp; besides Finance, will be one of the top five in terms of
-                allocation share in the
+                &nbsp; besides Finance, will be <b>one of the top five</b> in
+                terms of allocation share in the
                 <span class="default-year">2025-2026</span> Union Budget.
               </div>
               <button class="make-bet-btn make-bet-sbt" id="betsbt">
@@ -486,144 +486,42 @@
               </button>
               <button class="make-bet-btn make-bet-skip" id="betskip">
                 Skip betting
+              </button><br>
+              <button
+                id="invisiblebet"
+                style="pointer-events: none; opacity: 0"
+              >
+                Skip betting
               </button>
             </div>
           </div>
         </section>
-        <section
-          class="card-inner skip-bet"
-          id="card3"
-          style="max-height: 0; margin-top: 30px"
-        >
-          <div
-            class="flourish-embed flourish-bar-chart-race"
-            data-src="visualisation/27397780"
-          >
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript
-              ><img
-                src="https://public.flourish.studio/visualisation/27397780/thumbnail"
-                width="100%"
-                alt="bar-chart-race visualization"
-            /></noscript>
-          </div>
+        <section class="card-inner skip-bet" id="card3" style="max-height: 0">
+          <section class="skip-bet-container">
+            <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/27440915"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27440915/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
+          </section>
         </section>
+
         <section class="card-inner make-bet" id="card4" style="max-height: 0">
           <!-- Defense -->
-          <div
-            class="flourish-embed flourish-bar-chart-race Defense bet-bar-race"
-            data-src="visualisation/27413938"
-            style="max-height: 0"
-          >
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript
-              ><img
-                src="https://public.flourish.studio/visualisation/27413938/thumbnail"
-                width="100%"
-                alt="bar-chart-race visualization"
-            /></noscript>
-          </div>
+           <div class="flourish-embed flourish-bar-chart-race Defence bet-bar-race" data-src="visualisation/27441102"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27441102/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
           <!-- UT -->
-          <div
-            class="flourish-embed flourish-bar-chart-race bet-bar-race UT"
-            data-src="visualisation/27413996"
-            style="max-height: 0"
-          >
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript
-              ><img
-                src="https://public.flourish.studio/visualisation/27413996/thumbnail"
-                width="100%"
-                alt="bar-chart-race visualization"
-            /></noscript>
-          </div>
+           <div class="flourish-embed flourish-bar-chart-race bet-bar-race UT" data-src="visualisation/27441959"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27441959/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
           <!-- Agri -->
-          <div
-            class="flourish-embed flourish-bar-chart-race bet-bar-race Agri"
-            data-src="visualisation/27414025"
-            style="max-height: 0"
-          >
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript
-              ><img
-                src="https://public.flourish.studio/visualisation/27414025/thumbnail"
-                width="100%"
-                alt="bar-chart-race visualization"
-            /></noscript>
-          </div>
+           <div class="flourish-embed flourish-bar-chart-race bet-bar-race Agri" data-src="visualisation/27441952"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27441952/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
           <!-- Consumer -->
-          <div
-            class="flourish-embed flourish-bar-chart-race bet-bar-race Consumer"
-            data-src="visualisation/27414051"
-            style="max-height: 0"
-          >
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript
-              ><img
-                src="https://public.flourish.studio/visualisation/27414051/thumbnail"
-                width="100%"
-                alt="bar-chart-race visualization"
-            /></noscript>
-          </div>
+           <div class="flourish-embed flourish-bar-chart-race bet-bar-race Consumer" data-src="visualisation/27442002"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27442002/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
           <!-- Transport -->
-          <div
-            class="flourish-embed flourish-bar-chart-race bet-bar-race Transport"
-            data-src="visualisation/27414145"
-            style="max-height: 0"
-          >
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript
-              ><img
-                src="https://public.flourish.studio/visualisation/27414145/thumbnail"
-                width="100%"
-                alt="bar-chart-race visualization"
-            /></noscript>
-          </div>
+           <div class="flourish-embed flourish-bar-chart-race bet-bar-race Transport" data-src="visualisation/27441944"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27441944/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
           <!-- Governance -->
-          <div
-            class="flourish-embed flourish-bar-chart-race bet-bar-race Governance"
-            data-src="visualisation/27420735"
-            style="max-height: 0"
-          >
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript
-              ><img
-                src="https://public.flourish.studio/visualisation/27420735/thumbnail"
-                width="100%"
-                alt="bar-chart-race visualization"
-            /></noscript>
-          </div>
+           <div class="flourish-embed flourish-bar-chart-race bet-bar-race Governance" data-src="visualisation/27441990"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27441990/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
           <!-- Rural -->
-          <div
-            class="flourish-embed flourish-bar-chart-race bet-bar-race Rural"
-            data-src="visualisation/27420761"
-            style="max-height: 0"
-          >
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript
-              ><img
-                src="https://public.flourish.studio/visualisation/27420761/thumbnail"
-                width="100%"
-                alt="bar-chart-race visualization"
-            /></noscript>
-          </div>
+           <div class="flourish-embed flourish-bar-chart-race bet-bar-race Rural" data-src="visualisation/27442012"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27442012/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
           <!-- Education -->
-          <div
-            class="flourish-embed flourish-bar-chart-race bet-bar-race Education"
-            data-src="visualisation/27420784"
-            style="max-height: 0"
-          >
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript
-              ><img
-                src="https://public.flourish.studio/visualisation/27420784/thumbnail"
-                width="100%"
-                alt="bar-chart-race visualization"
-            /></noscript>
-          </div>
+           <div class="flourish-embed flourish-bar-chart-race bet-bar-race Education" data-src="visualisation/27441976"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27441976/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
         </section>
-        <section class="card-inner-expanded" id="card5" style="max-height: 0">
-          <p>
+        <section class="ca rd-inner-expanded" id="card5" style="max-height: 0">
+          <p style="width: 100%; max-width: max-content; margin: 0 auto">
             Those were the top 5. Here's a look at how the rest of the sectors'
             allocations evolved.
           </p>
@@ -645,13 +543,17 @@
           </section>
         </section>
       </section>
-      <div id="end-credits" style="max-height: 0; overflow: hidden;">
+      <div id="end-credits" style="max-height: 0; overflow: hidden">
         <p>
           <span><b>Frontend development, concept and text: </b></span>Godhashri
           Srinivasan
         </p>
-        <p><span><b>Editorial support:</b></span> TCA Sharad Raghavan</p>
-        <p><span><b>Graphic support:</b></span> Ramesh Chandran KP</p>
+        <p>
+          <span><b>Editorial support:</b></span> TCA Sharad Raghavan
+        </p>
+        <p>
+          <span><b>Graphic support:</b></span> Ramesh Chandran KP
+        </p>
       </div>
     </div>
 
