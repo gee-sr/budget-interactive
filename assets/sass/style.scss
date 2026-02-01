@@ -192,6 +192,9 @@ body {
     min-height: 85dvh;
     border-radius: 10px;
     border: 7px solid #e3ded3;
+    @media (max-width: 450px){
+      width:100%;
+    }
     // background-color: #fffef5;
     .card-inner {
       //   display: flex;
@@ -208,7 +211,7 @@ body {
       .lead-text-c {
         position: relative;
         .lead-text {
-          font-size: 12px;
+          font-size: 16px;
           font-style: italic;
           margin: 2px;
         }
@@ -510,7 +513,7 @@ body {
     }
   }
   #end-credits {
-    width: 100%;
+    width: 90%;
     max-width: 800px;
     margin: 18px auto;
     p {
