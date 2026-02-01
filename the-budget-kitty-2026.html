@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://www.thehindu.com/theme/css/THRX/common-styles.min.css?ver=1769686737" />
+</head>
+
+<body>
+<div class="embed">
+<style>
+.thg-budget-explainer-app {
+background-color: #cde9f5; height: 600px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: auto;
+}
+.thg-budget-wrapper {
+position: relative; width: fit-content; transition: .2s transform; 
+}
+.thg-budget-explainer-app ul, .thg-budget-explainer-app ul ul {
+list-style: none; padding: 0;
+}
+.thg-budget-explainer-app header {
+position: relative; width: 230px; height: 230px; border-radius: 50%; background: -webkit-linear-gradient(left top, #ffffff -45%, #b5b7bb 100%); padding: 5px; margin-top: -90px; z-index: 20;
+}
+.thg-budget-explainer-app header::before {
+content: ''; width: 220px; height: 220px; position: absolute; top: 5px; left: 5px; border-radius: 50%; background-color: #FFF;
+}
+.thg-budget-explainer-app header::after {
+content: '....'; position: absolute; top: 50%; left: 50%; font-size: 36px; letter-spacing: 8px; width: fit-content; transform: translate(-50%, -50%); margin-top: 26px; color: #999999;
+}
+.thg-budget-explainer-app header h2 {
+position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; text-transform: uppercase; font-family: 'Merriweather', serif; font-weight: 900; font-size: 32px; margin-top: -25px; 
+}
+.thg-budget-explainer-app header span {
+position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; text-transform: uppercase; font-weight: 300; background-color: #b00020; color: #000; display: inline-block; width: 240px; font-family: 'Merriweather Sans', sans-serif; font-size: 12px; text-align: center; border-radius: 5px; margin-top: 75px; padding: 5px; color: #FFF; letter-spacing: 0.04rem; 
+}
+.thg-budget-explainer-app header span::before {
+content: ''; width: 20px; height: 20px; background-color: #b00020; position: absolute; left: -8px; top: 10px; border-radius: 2px; z-index: -1;
+}
+.thg-budget-explainer-app header span::after {
+content: ''; width: 20px; height: 20px; background-color: #b00020; position: absolute; right: -8px; top: 10px; border-radius: 2px; z-index: -1; 
+}
+.thg-budget-explainer-app #tree {
+text-align: center;
+}
+#tree button {
+background-color: #f90; outline: none; border: none; padding: 5px 22px; border-radius: 20px; color: #ffffff; font-family: 'Merriweather Sans', sans-serif; font-size: 15px; text-transform: uppercase; 
+}
+#tree button:hover {
+text-decoration: none;
+}
+#tree .children .sub-cat {
+font-family: 'Merriweather Sans', sans-serif; margin-bottom: 15px; background-color: #1f314d; color: #fff; padding: 3px 10px; font-size: 12px; border-radius: 20px; 
+}
+#tree .grandchild button {
+font-family: 'Merriweather Sans', sans-serif; margin-bottom: 15px; color: #1f314d; background-color: #fff; padding: 3px 10px; font-size: 12px; border-radius: 20px; font-weight: 600;
+}
+#tree .children { min-width: 170px; margin-top: 20px; }
+.deficit-section>.children { width: 215px; }
+.greatgrandchild li {
+background-color: #ffffff99; padding: 10px; border-radius: 5px; margin-bottom: 20px;
+}
+#tree .children li.desc {
+background-color: transparent; color: #1f314d; font-weight: 400; font-size: 14px; margin-bottom: 20px;
+}
+#tree .children, #tree .children .grandchild, #tree .children .greatgrandchild { display: none; }
+.children { opacity: 0; transition: opacity 0.3s ease; }
+.children[style*="display: block"] { opacity: 1; }
+.sub-cat { cursor: pointer; }
+.content-area {
+position: absolute; bottom: 50px; width: 100%; text-align: center; max-width: 650px; font-family: 'Merriweather Sans', sans-serif; font-size: 14px; padding: 20px; 
+}
+.content-area p { font-family: 'Merriweather Sans', sans-serif; }
+.greatgrandchild {
+width: 80%; margin: 0 auto; position: relative; padding: 10px 0;
+}
+.greatgrandchild p {
+font-size: 12px; font-family: 'Merriweather Sans', sans;
+}
+.greatgrandchild::before {
+content: ''; width: 0; height: 0; border-top: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 15px solid #ffffff99; border-left: 15px solid transparent; position: absolute; top: -28px; left: 50%; transform: translateX(-50%);
+}
+.greatgrandchild span {
+font-size: 15px; font-weight: 400; font-family: 'Merriweather Sans'; color: #b00020; margin-bottom: 10px; display: inline-block;
+}
+.greatgrandchild p { margin-bottom: 0 !important;}
+.parent-cat, .sub-cat { position: relative; padding-right: 25px !important;
+}
+.parent-cat::after, .sub-cat::after {
+content: "+"; position: absolute; right: 8px; top: 50%; transform: translateY(-50%); font-weight: bold; transition: transform 0.2s ease;
+}
+.parent-cat[aria-expanded="true"]::after, .sub-cat[aria-expanded="true"]::after {
+content: "-";
+}
+@media screen and (max-width: 767px) {
+.thg-budget-explainer-app {
+min-height: 600px; height: auto; justify-content: space-between; align-items: center; padding: 20px;
+}
+.content-area { bottom: 10px; }
+.thg-budget-explainer-app header { margin-top: 0; }
+.thg-budget-wrapper { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+#tree .parent { display: flex; flex-direction: column; row-gap: 20px; margin-top: 20px; } 
+.greatgrandchild { position: relative; }
+}
+@media (min-width:768px) {
+.thg-budget-wrapper { margin-top: -100px; }
+.children { position: absolute; top: 30px; left: 50%; transform: translateX(-50%); } 
+.grandchild { padding: 20px; }
+.income-section { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-left: -240px; margin-top: -55px; } 
+.income-section::after { content: ''; width: 100px; height: 1px; border-top: 1px dashed #666; position: absolute; top: 15px; right: -100px; } 
+.expenditure-section { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-left: 255px; margin-top: -62px; } 
+.expenditure-section::before { content: ''; width: 100px; height: 1px; border-top: 1px dashed #666; position: absolute; top: 16px; left: -100px; } 
+.deficit-section { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-top: 112px; } 
+.deficit-section::before { content: ''; height: 30px; width: 1px; border-left: 1px dashed #666; position: absolute; top: -31px; left: 50%; transform: translateX(-50%); } 
+}
+@media (min-width:1100px) {
+.children li { position: relative; }
+.income-section .sub-cat { width: 150px; }
+.expenditure-section .sub-cat { width: 185px; }
+.deficit-section .sub-cat { width: 265px; margin-left: -20px; }
+.income-section .grandchild { position: absolute; left: -250px; top: 50%; transform: translateY(-50%); width: 250px; padding: 20px; margin-top: -35px; margin-bottom: 50px; } 
+.income-section .grandchild::before { content: ''; position: absolute; height: 100%; width: 8px; border-right: 1px solid #666; right: 25px; top: 0; border-top: 1px solid #666; border-bottom: 1px solid #666;
+}
+.income-section .sub-cat[aria-expanded="true"]::before {
+content: ''; width: 53px; height: 1px; position: absolute; border-top: 1px solid #666; left: -35px; z-index: -1; top: 50%; transform: translateY(-50%);
+}
+.income-section .sub-cat.no-border-after[aria-expanded="true"]::before {
+border-top: none;
+}
+.expenditure-section .grandchild {
+position: absolute; right: -275px; top: 50%; transform: translateY(-50%); width: 265px;
+}
+.expenditure-section .grandchild::before {
+content: ''; position: absolute; height: 100%; width: 8px; border-left: 1px solid #666; left: 10px; top: 0; border-top: 1px solid #666; border-bottom: 1px solid #666;
+}
+.expenditure-section .sub-cat[aria-expanded="true"]::before {
+content: ''; width: 53px; height: 1px; position: absolute; border-top: 1px solid #666; right: -21px; z-index: -1; top: 50%; transform: translateY(-50%);
+}
+.expenditure-section .sub-cat.no-border-after[aria-expanded="true"]::before { border-top: none; }
+}
+</style>
+<div class="thg-budget-explainer-app">
+<div class="content-area" id="thg-explainer-blurb">
+<p>This interactive visualization lets you explore the breakdown of government expenditure, income, and the crucial bottom line: the deficit or surplus. Use the buttons below to explore this flow chart.
+</p>
+</div>
+<div class="thg-budget-wrapper">
+<header class="subscribed-user">
+<h2><strong>Budget</strong> Explained</h2><span>2026 Breakdown</span>
+</header>
+<div id="tree">
+<ul class="parent">
+<li class="income-section"><button class="parent-cat" aria-expanded="false">Income</button>
+<ul class="children" aria-hidden="true">
+<li class="desc">Money received by the government as taxes, credit and more available for spending</li>
+<li><button class="sub-cat" aria-expanded="false">Tax Revenue</button>
+<ul class="grandchild" aria-hidden="true">
+<li><button class="gc-cat" aria-expanded="false">Corporation Tax </button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹12,31,000 cr</span>
+<p>Levied on the taxable incomes of corporate companies, expressed as a percentage. This includes both Indian and foreign companies' earnings in India.</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Taxes on Income</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹14,66,000 cr</span>
+<p>Incomes of individuals, firms etc other than companies identified under the Companies Act, 2013. Late fees, penalties and taxes on purchase of securities are other components</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Customs</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹2,71,200 cr</span>
+<p>Import duties, export duties, cesses on exports, sale proceeds of confiscated goods</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Excise Duties</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹3,88,910 cr</span>
+<p>Taxes levied on products considered harmful (cigarettes, tobacco etc.), cesses on products levied by different government departments, a component for disaster relief and more</p>
+</li>
+</ul>
+</li>
+<!-- <li><button class="gc-cat" aria-expanded="false">Service Tax</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹100 cr</span>
+<p>Subsumed under GST after 2017. The budget figure indicates
+residual arrears </p>
+</li>
+</ul>
+</li> -->
+<li><button class="gc-cat" aria-expanded="false">GST</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹10,19,020 cr</span>
+<p>Tax on Goods or Services or both, exempting supply of alcoholic liquor for human consumption</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Tax from UT</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹10,256 cr</span>
+<p>Taxes from land revenue, stamps and registration, state excise, taxes on vehicles, goods and passengers </p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Other taxes</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹17,700 cr</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><button class="sub-cat" aria-expanded="false">Non-Tax Revenue</button>
+<ul class="grandchild" aria-hidden="true">
+<li><button class="gc-cat" aria-expanded="false">Interest receipts</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹41,763 cr</span>
+<p>Loan interest money from States, UTs, public sector enterprises, Port Trusts and other Statutory Bodies, Cooperatives, Government Servants etc</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Dividends and Profits</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹3,91,000 cr</span>
+<p>Dividends and profits from public sector enterprises, surplus of RBI transferred to the government</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">External Grants</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹2,327 cr</span></li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">UT receipts</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹1,765 cr</span>
+<p>Money received by UTs from administrative services, sale of timber and forest produce, receipts from Chandigarh Transport Undertaking and receipts from Shipping, Tourism and Power.</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Other Non-Tax Revenue </button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹2,29,373 cr</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><button class="sub-cat" aria-expanded="false">Capital receipts</button>
+<ul class="grandchild" aria-hidden="true">
+<li><button class="gc-cat" aria-expanded="false">Debt receipts</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹16,63,066 cr</span>
+<p>Borrowings from market loans, treasury bills and bonds, state provident funds, multilateral organisations, foreign governments</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Non-Debt receipts</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹1,18,397 cr</span>
+<p>Recovery of money loaned to State governments, UTs, public sector enterprises, money from equity investments</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><button class="sub-cat no-border-after" aria-expanded="false">Cash Balance</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹32,702 cr</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="expenditure-section"><button class="parent-cat" aria-expanded="false">Expenditure</button>
+<ul class="children" aria-hidden="true">
+<li class="desc">Money spent on infrastructure, schemes, repayments and more</li>
+<li><button class="sub-cat" aria-expanded="false">Centre's Expenditure</button>
+<ul class="grandchild" aria-hidden="true">
+<li><button class="gc-cat" aria-expanded="false">Establishment expense</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹8,24,114 cr</span>
+<p>Expenses related to the functioning of Ministry departments and their subordinate offices</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Central schemes</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹17,71,928 cr</span>
+<p>Expenses incurred on insuring crops, agricultural and animal husbandry loans, MSP and non-MSP procurement, pulse distribution to States and more</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Others </button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹17,61,387 cr</span>
+<p>Funding for autonomous bodies like the National Horticulture Board and statutory bodies and government programmes like the Agriculture Census</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Interest Payments </button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹14,03,972 cr</span>
+<p>Funding for autonomous bodies like the National Horticulture Board and statutory bodies and government programmes like the Agriculture Census</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><button class="sub-cat" aria-expanded="false">Transfers</button>
+<ul class="grandchild" aria-hidden="true">
+<li><button class="gc-cat" aria-expanded="false">Centrally sponsored schemes</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹5,48,798 cr</span>
+<p>Expenditure incurred under schemes like National AYUSH Mission, PM POSHAN, PMJAY and PMAY</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Devolution of taxes to states</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹15,26,255 cr</span>
+<p>Some taxes are shared by the Centre and State. This devolution is the share in those taxes given to the States</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Finance Commission Grants</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹1,29,397 cr</span>
+<p>Grants include money sent to urban and rural local bodies, the health sector, disaster management bodies</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">Others </button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹3,11,691 cr</span>
+<p>All other allocations to States</p>
+</li>
+</ul>
+</li>
+<li><button class="gc-cat" aria-expanded="false">NCCF/NDRF</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹10,910 cr</span>
+<p>Funds for National Cooperative Consumers' Federation of India and National Disaster Relief Fund</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><button class="sub-cat no-border-after" aria-expanded="false">Capital
+Expenditure</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹12,21,821 cr</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="deficit-section"><button class="parent-cat" aria-expanded="false">Deficit</button>
+<ul class="children" aria-hidden="true">
+<li class="desc">The difference between government expenditure and revenue</li>
+<li><button class="sub-cat" aria-expanded="false">Market Borrowings (G-sec)</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹11,73,210 cr</span>
+<p>Money received from government security bonds that are bought by competing lenders</p>
+</li>
+</ul>
+</li>
+<li><button class="sub-cat" aria-expanded="false">Short term Borrowing</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>1,30,000 cr</span>
+<p>Money received from government treasury bonds</p>
+</li>
+</ul>
+</li>
+<li><button class="sub-cat" aria-expanded="false">Securities against Small
+Savings</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹3,86,772 cr</span>
+<p>Small savings are 12 investment instruments operated by the government that ensure safe returns and finance for the government to manage its fiscal deficit.</p>
+</li>
+</ul>
+</li>
+<li><button class="sub-cat" aria-expanded="false">State Provident Funds</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹3,500 cr</span>
+<p>Money received from provident fund accounts maintained by state governments as PF for government employees</p>
+</li>
+</ul>
+</li>
+<li><button class="sub-cat" aria-expanded="false">Other Receipts</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>-₹45,801 cr</span>
+<p>Includes internal debt - debt sourced from within india - and public accounts</p>
+</li>
+</ul>
+</li>
+<li><button class="sub-cat" aria-expanded="false">External Debt</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹15,385 cr</span>
+<p>Debt from multilateral organisations or foreign governments</p>
+</li>
+</ul>
+</li>
+<li><button class="sub-cat" aria-expanded="false">Cash Balance</button>
+<ul class="greatgrandchild" aria-hidden="true">
+<li><span>₹32,702 cr</span>
+<p>Existing cash reserves with the government </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+const parentList = document.querySelector('.parent');
+const blurb = document.querySelector('#thg-explainer-blurb');
+const toggleList = (target, list, isGrandchild = false, isGreatGrandchild = false) => {
+if (list) {
+if (!isGrandchild && blurb) {
+blurb.style.display = "none";
+}
+if (!isGreatGrandchild) {
+parentList.querySelectorAll(isGrandchild ? '.grandchild' : '.children').forEach(otherList => {
+if (otherList !== list && otherList.style.display === 'block') {
+hideList(otherList);
+}
+});
+}
+const isVisible = list.style.display === 'block';
+list.style.display = isVisible ? 'none' : 'block';
+target.setAttribute('aria-expanded', !isVisible);
+list.setAttribute('aria-hidden', isVisible);
+list.offsetHeight;
+}
+};
+const hideList = (list) => {
+list.style.display = 'none';
+const associatedButton = list.parentNode.querySelector('.parent-cat, .sub-cat, .gc-cat'); // Include gc-cat
+if (associatedButton) {
+associatedButton.setAttribute('aria-expanded', 'false');
+list.setAttribute('aria-hidden', 'true');
+}
+};
+parentList.addEventListener('click', (event) => {
+const target = event.target;
+if (target.classList.contains('parent-cat')) {
+const childrenList = target.parentNode.querySelector('.children');
+toggleList(target, childrenList);
+} else if (target.classList.contains('sub-cat')) {
+parentList.querySelectorAll('.grandchild, .greatgrandchild').forEach(hideList);
+const grandchildList = target.parentNode.querySelector('.grandchild');
+const greatGrandchildList = target.parentNode.querySelector('.greatgrandchild');
+if (grandchildList) {
+toggleList(target, grandchildList, true);
+} else if (greatGrandchildList) {
+toggleList(target, greatGrandchildList, false, true);
+}
+} else if (target.classList.contains('gc-cat')) {
+parentList.querySelectorAll('.greatgrandchild').forEach(hideList);
+const greatGrandchildList = target.parentNode.querySelector('.greatgrandchild');
+toggleList(target, greatGrandchildList, false, true);
+}
+});
+parentList.querySelectorAll('.parent-cat, .sub-cat, .gc-cat').forEach(element => {
+const list = element.parentNode.querySelector('.children, .grandchild, .greatgrandchild');
+const isVisible = list && list.style.display === 'block';
+element.setAttribute('aria-expanded', isVisible ? 'true' : 'false');
+if (list) {
+list.setAttribute('aria-hidden', !isVisible);
+}
+});
+});
+</script>
+</div>
+</body>
+
+</html>
